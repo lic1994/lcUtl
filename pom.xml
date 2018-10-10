@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.lc</groupId>
+  <artifactId>lcUtl</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <properties>
+		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<wcs.standard.driver.version>5.0.0-SNAPSHOT</wcs.standard.driver.version>
+		<wcs.platform.version>5.0.0-SNAPSHOT</wcs.platform.version>
+
+		<y2.component.version>200.0.0-SNAPSHOT</y2.component.version>
+		<y2.unit.version>200.0.0-SNAPSHOT</y2.unit.version>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>foeris-public</id>
+			<name>public</name>
+			<url>http://nexus.foeris.com:4667/content/groups/public/</url>
+		</repository>
+	</repositories>
+
+	<distributionManagement>
+		<repository>
+			<id>foeris-release</id>
+			<name>release</name>
+			<url>http://nexus.foeris.com:4667/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>foeris-snapshot</id>
+			<name>snapshot</name>
+			<url>http://nexus.foeris.com:4667/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<dependencies>
+		<!-- test -->
+		<dependency>
+   <groupId>org.apache.poi</groupId>
+   <artifactId>poi</artifactId>
+   <version>3.17</version>
+</dependency>
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>3.17</version>
+</dependency> 
+
+		<dependency>
+			<groupId>com.foeris.y2.unit</groupId>
+			<artifactId>y2.unit.spring_test</artifactId>
+			<version>${y2.unit.version}</version>
+			
+		</dependency>
+		<!-- provided -->
+		<dependency>
+			<groupId>com.foeris.y2.component</groupId>
+			<artifactId>y2.component.servlet</artifactId>
+			<version>${y2.component.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.wxzd.wcs</groupId>
+			<artifactId>wcs.platform</artifactId>
+			<version>${wcs.platform.version}</version>
+		</dependency>
+
+	</dependencies>
+</project>
